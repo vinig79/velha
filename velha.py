@@ -1,5 +1,3 @@
-
-
 class Velha:
     matriz = [["1","2","3"],["4","5","6"],["7","8","9"]]
     def verify(self):
@@ -13,8 +11,7 @@ class Velha:
             elif self.matriz[0][x] == self.matriz[1][x] and self.matriz[1][x] == self.matriz[2][x]:
                 return (f"{self.matriz[0][x]} Win's",True)
 
-        if (self.matriz[0][0] == self.matriz[2][2] and self.matriz[0][0] == self.matriz[1][1]) or (self.matriz[0][2] ==   self.matriz[2][0] and 
-            self.matriz[0][2] == self.matriz[1][1]): 
+        if (self.matriz[0][0] == self.matriz[2][2] and self.matriz[0][0] == self.matriz[1][1]) or (self.matriz[0][2] ==   self.matriz[2][0] and  self.matriz[0][2] == self.matriz[1][1]): 
             return (f"{self.matriz[1][1]} Win's",True)
             
         return ("velha",False)
