@@ -21,28 +21,32 @@ while True:
     print("!! OK vamos joagar !!\n")
 
     while c != 4:
+       
         print(velha.menu())
         print("\nEscolha um numero corresponde a posição que deseja:")
         a = int(input())
-        if not a in [x for x in range(1,10)] and a in controle:
+        if not a in [x for x in range(1,10)] or a in controle:
             print("apenas os números indicados e não selecionados")
             continue
-        velha.pos(b,p2)
+        controle.append(a)
         velha.pos(a,x_or_o)
         b = randint(1,9)
-        if b in controle:
-            continue
-        velha.pos(b,p2)
-       
+        while b in controle:
+            b = randint(1,9)
+
         controle.append(b)
+        velha.pos(b,p2)
         if velha.verify()[1]:
             print(velha.verify()[0])
             break
+       
         c += 1
 
+    
     print("=-"*10,"Vencedor","-="*10)
     if not velha.verify()[1]:
         print(velha.verify()[0])
+    velha.zera()
     print()
 
     cont = input("deseja continuar??(s/n)").lower()
