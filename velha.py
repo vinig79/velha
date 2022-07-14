@@ -42,3 +42,5 @@ class Velha:
                 self.insert(2,1,player)
             case 9:
                 self.insert(2,2,player)
+    def zera(self):
+        self.matriz = [["1","2","3"],["4","5","6"],["7","8","9"]]
