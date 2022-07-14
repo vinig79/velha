@@ -27,13 +27,13 @@ while True:
         if not a in [x for x in range(1,10)] and a in controle:
             print("apenas os números indicados e não selecionados")
             continue
-        
+        velha.pos(b,p2)
         velha.pos(a,x_or_o)
         b = randint(1,9)
         if b in controle:
             continue
         velha.pos(b,p2)
-        controle.append(a)
+       
         controle.append(b)
         if velha.verify()[1]:
             print(velha.verify()[0])
